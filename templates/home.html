@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+  }
+
+  body {
+      background-color: rgb(96, 248, 248);
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+  }
+  
+  .box {
+    border-radius: 20px;
+    font-size: 20px;
+    background: linear-gradient(to left top, white, rgb(147, 239, 255));
+    padding: 50px 60px 0px 40px;
+    width: 400px;
+    height: 380px;
+    box-shadow: 1px 1px 30px ;
+    z-index: 2;
+}
+
+label {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    width: 380px;
+    height: 35px;
+    font-size: 15px;
+    padding: 3px 3px 3px 5px;
+    border-radius: 4px;
+    border: 2px solid grey;
+    background-color: whitesmoke;
+}
+
+
+.button {
+    background-color: #2773a2;
+    width: 400px;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    height: 50px;
+    font-weight: 580;
+    font-size: 17px;
+    word-spacing: 2.5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+  </style>
+  <body>
+    <div class="box">
+      <h2>Login Authentication</h2><br>
+      <form action='/' method='POST'>
+          <label>Email</label><br>
+          <input type='text' name='email'><br><br>
+          <label>Password</label><br>
+          <input type='password' name='password'><br><br>
+          <input type='submit'class="button" value="LogIn">
+      </form><br>
+      <a href="{{url_for('signup')}}">Don't have an account yet?</a>
+    </div>  
+
+  </body>
+</html>
